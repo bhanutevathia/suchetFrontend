@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>ADHD Insights</title>
+    <meta name="title" content="ADHD Insights" />
+    <meta
+      name="description"
+      content="A data-driven ADHD insights dashboard built with React, Express, and TailwindCSS — explore conditions, factors, performance, and treatments interactively."
+    />
+
+    <!-- Favicon / App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Prevent white flash on dark mode -->
+    <script>
+      (() => {
+        const theme = localStorage.theme;
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (theme === "dark" || (!theme && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      })();
+    </script>
+  </head>
+
+  <body
+    class="bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 text-slate-900 dark:text-slate-100 antialiased"
+  >
+    <div id="root"></div>
+
+    <!-- Vite entry -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
